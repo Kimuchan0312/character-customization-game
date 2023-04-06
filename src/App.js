@@ -18,22 +18,6 @@ const total = {
   layer_3: 9,
 };
 
-function multiply(a,b) {
-  return a*b;
-}
-
-function square(x) {
-  return multiply(x,x)
-}
-
-function run(fn) {
-  console.log(`running ${fn}`);
-  console.log(`Result: ${fn(10)}`);
-  console.log('Done');
-}
-
-run(square)
-
 const generateCustomizationOptions = (category, count, setSelectedOptions) => {
   const options = [];
   for (let i = 1; i <= count; i++) {

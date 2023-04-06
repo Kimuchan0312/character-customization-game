@@ -13,7 +13,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 400vh;
 }
 
 .header {
@@ -92,14 +91,22 @@ body {
 }
 
 /* Responsive layout */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .avatar-preview {
     width: 100px;
     height: 150px;
     margin-bottom: 20px;
+    position: sticky;
+    left: 12%;
+    top: 5%;
+    margin-bottom: 40px;
   }
 
   .sidebar {
     padding: 20px;
+  }
+
+  .container {
+    display: block;
   }
 }
