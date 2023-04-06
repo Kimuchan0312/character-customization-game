@@ -92,7 +92,7 @@ body {
 }
 
 /* Responsive layout */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .avatar-preview {
     width: 100px;
     height: 150px;
