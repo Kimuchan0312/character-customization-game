@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Avatar from "./components/Avatar";
 import Sidebar from "./components/Sidebar";
+import { getOptionImageUrl } from "./utils";
 
 const total = {
   body: 17,
@@ -17,15 +18,6 @@ const total = {
   layer_3: 9,
 };
 
-const getOptionImageUrl = (category, optionIndex) => {
-  if (category === "hats" || category === "glasses") {
-    return `/images/accessories/${category}/${optionIndex}.png`;
-  } else if (category.startsWith("layer")) {
-    return `/images/clothes/${category}/${optionIndex}.png`;
-  } else {
-    return `/images/${category}/${optionIndex}.png`;
-  }
-};
 
 const generateCustomizationOptions = (category, count, setSelectedOptions) => {
   const options = [];
@@ -62,9 +54,9 @@ function App() {
 
   const avatarImageUrls = {
     body: `/images/body/${selectedOptions.body || 1}.png`,
-    eyes: `/images/eyes/${selectedOptions.eyes || 1}.png`,
+    eyes: `/images/eyes/${selectedOptions.eyes || 2}.png`,
     hair: `/images/hair/${selectedOptions.hair || 1}.png`,
-    mouths: `/images/mouths/${selectedOptions.mouths || 1}.png`,
+    mouths: `/images/mouths/${selectedOptions.mouths || 2}.png`,
     noses: `images/noses/${selectedOptions.noses || 1}.png`,
     eyebrows: `/images/eyebrows/${selectedOptions.eyebrows || 1}.png`,
     hats: `/images/accessories/hats/${selectedOptions.hats || 1}.png`,
